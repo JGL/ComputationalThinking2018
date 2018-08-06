@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Computational Thinking: Joel Gethin Lewis: Lecture 8.</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Computational Thinking</h2>
+					<p>Joel Gethin Lewis</p>
+					<p>Lecture 8</p>
+				</section>
+				<section>
+					<h3>What I'm going to talk about today:</h3>
+					<ol>
+						<li>Motion and 3D.</li>
+						<li>Filling shelves.</li>
+						<li>How to mess with images.</li>
+						<li>How to put it all together to make a gif maker.</li>
+						<li>How to steal and share aka How to use GitHub.</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Motion and 3D.</h3>
+					<p>Thanks again to Rune Madsen for putting his course online:</p>
+					<p><a href="http://printingcode.runemadsen.com/lecture-motion/">http://printingcode.runemadsen.com/lecture-motion/</a></p>
+					<p><a href="http://printingcode.runemadsen.com/lecture-3d/">http://printingcode.runemadsen.com/lecture-3d/</a>.</p>
+					<p>Don't forget to click to the slides and press 's' Joel!</p>
+				</section>
+				<section>
+					<h3>Filling shelves.</h3>
+					<p>Thanks again to Ali Almossawi for writing his book.</p>
+					<p>Read the Filling shelves chapter of "Bad Choices" Joel!</p>
+				</section>
+				<section>
+					<h3>How to mess with images</h3>
+					<p>So far we have just been drawing shapes, or drawing gifs or grabbing live video.</p>
+					<p>How can we mess with images? Lets have a look at the <a href="https://p5js.org/reference/#group-Image">image section of the p5.js reference</a>.</p>
+					<p><a href="https://p5js.org/reference/#/p5/filter">https://p5js.org/reference/#/p5/filter</a> looks useful.</p>
+				</section>
+				<section>
+					<h3>How to put it all together to make a gif maker.</h3>
+					<p>So lets put together all the code we've made over the past few lectures: gif loading, gui control, gif saving and filtering images.</p>
+					<p>First lets bring all the other libraries into the gif export example that we made last time.</p>
+				</section>
+				<section>
+					<h3>How to put it all together to make a gif maker.</h3>
+					<p>Bringing all the code into one file is a mess, but useful to be able to make sure that everything works together.</p>
+					<p>Next we need to add <a href="https://p5js.org/examples/dom-input-and-button.html">a button</a> instead of a mouse click to export the GIF.</p>
+					<p>You'll notice that the image is coming out at the wrong size - this is a bug with how p5.js works around Retina displays. We need to add a call to <a href="https://p5js.org/reference/#/p5/pixelDensity">pixelDensity</a> to fix this problem.</p>
+				</section>
+				<section>
+					<h3>How to put it all together to make a gif maker.</h3>
+					<p>Once that works lets add a way of choosing between GIF input and live camera input. Looking in the p5.dom Reference, there is an example called <a href="https://p5js.org/reference/#/p5/createSelect">createSelect</a>.</p>
+					<p>Once that works to export, lets add another option - with a filter effect. Threshold is fine - but you could use any of the <a href="https://p5js.org/reference/#/p5/filter">Filter options</a>.</p>
+				</section>
+				<section>
+					<h3>How to steal and share aka How to use GitHub.</h3>
+					<p><a href="https://en.wikipedia.org/wiki/GitHub">GitHub</a> is a website that enables people to publicly share code using the <a href="https://en.wikipedia.org/wiki/Git">Git protocol</a>.</p>
+					<p>Git was made by Linus Torvald (the developer too lazy to fail from lecture 1) to allow the Linux Kernel to continue to develop.</p>
+					<p>Github is the standard way to share your code with others or work on big projects. p5.js is hosted there, along with many others.</p>
+				</section>
+				<section>
+					<h3>How to steal and share aka How to use GitHub.</h3>
+					<p>I often search GitHub looking for interesting code.</p>
+					<p>I recommend <a href="https://github.com/join?source=header-home">registering at GitHub</a> as well as <a href="https://try.github.io/levels/1/challenges/1">working through their tutorial</a>.</p>
+					<p><a href="https://github.com/blog/1845-psd-viewing-diffing">Even PSD files work!</a> Git is what I use for all projects - those across time zones or solo ones.</p>
+				</section>
+				<section>
+					<h2>Thanks!</h2>
+					<ul>
+						<li>More about me: <a href="https://twitter.com/joelgethinlewis">@joelgethinlewis</a></li>
+						<li>Get in contact via <a href="https://crosslab-gcdcsm.slack.com">crosslab-gcdcsm.slack.com</a></li>
+						<li>Website:<br><a href="https://jgl.github.io/ComputationalThinking/">https://jgl.github.io/ComputationalThinking</a></li>
+						<li>Today's slides:<br><a href="https://jgl.github.io/ComputationalThinking/lecture8.html">https://jgl.github.io/ComputationalThinking/lecture8.html</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				// Display controls in the bottom right corner
+   				//controls: false,
+				// Display the page number of the current slide
+    			slideNumber: 'c/t',
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Computational Thinking: Joel Gethin Lewis: Lecture 1.</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Computational Thinking</h2>
+					<p>Joel Gethin Lewis</p>
+					<p>Lecture 1</p>
+				</section>
+				<section>
+					<h3>What I'm going to talk about today:</h3>
+					<ol>
+						<li>Introduction.</li>
+						<li>The History of Graphic Design and the History of Graphic Computers.</li>
+						<li>What Computational Thinking is and why it's important to everyone (even Graphic Designers).</li>
+						<li>How to count.</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Introduction.</h3>
+					<ul>
+						<li>I want to teach you how to learn.</li>
+						<li>Talent borrows, genius steals.</li>
+						<li>How these lectures are going to work.</li>
+						<li>How to be lazy like a fox.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>I want to teach you how to learn.</h3>
+					<ul>
+						<li>Each lecture is available online for you to review afterwards, during or even before!</li>
+						<li>Each lecture is supposed to pique your curiosity in different areas. No homework, just pay attention.</li>
+						<li>No stupid questions, only stupid answers. Please ask them via <a href="https://crosslab-gcdcsm.slack.com">crosslab-gcdcsm.slack.com</a>.</li>
+						<li>The lectures are a mashup of different resources, just like everything else.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Talent borrows, genius steals.</h3>
+					<ul>
+						<li>A misheard <a href="https://quoteinvestigator.com/2013/03/06/artists-steal/">quote</a> from Steve Jobs. Who stole it from <a href="https://www.quora.com/What-did-Picasso-mean-when-he-said-%E2%80%9Cgood-artists-copy-great-artists-steal%E2%80%9D-Did-he-really-say-this-or-did-someone-else-say-it">Picasso</a>, <a href="https://nancyprager.wordpress.com/2007/05/08/good-poets-borrow-great-poets-steal/">but maybe not</a>.</li>
+						<li>The director Jim Jarmusch <a href="https://www.moviemaker.com/archives/series/things_learned/jim-jarmusch-5-golden-rules-of-moviemaking/">said it best</a>:</li>
+					</ul>
+				</section>
+				<section>
+					<p><q cite="https://www.moviemaker.com/archives/series/things_learned/jim-jarmusch-5-golden-rules-of-moviemaking/"> &ldquo;Nothing is original. Steal from anywhere that resonates with inspiration or fuels your imagination. Devour old films, new films, music, books, paintings, photographs, poems, dreams, random conversations, architecture, bridges, street signs, trees, clouds, bodies of water, light and shadows. Select only things to steal from that speak directly to your soul. If you do this, your work (and theft) will be authentic. Authenticity is invaluable; originality is nonexistent. And don’t bother concealing your thievery—celebrate it if you feel like it. In any case, always remember what Jean-Luc Godard said: “It’s not where you take things from—it’s where you take them to.&rdquo;</q></p>
+				</section>
+				<section>
+					<p><a href="https://austinkleon.com/steal/">Austin Kleon</a> also has some good tips:</p>
+				</section>
+				<section>
+					<a data-flickr-embed="true"  href="https://www.flickr.com/photos/deathtogutenberg/6929971399/in/album-72157629454918267/" title="Steal Like An Artist - Promotional Poster"><img src="https://farm8.staticflickr.com/7208/6929971399_0173c3da4c_z.jpg" width="480" height="640" alt="Steal Like An Artist - Promotional Poster"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+				</section>
+				<section>
+					<p>Finishing with <a href="https://en.wikipedia.org/wiki/Howard_H._Aiken">Howard Aiken</a> on the flip side:</p>
+					<p><q cite="https://www.brainyquote.com/quotes/quotes/h/howardaike101540.html">&ldquo;Don't worry about people stealing your ideas. If your ideas are any good, you'll have to ram them down people's throats.&rdquo;</q></p>
+				</section>
+				<section>
+					<h3>How these lectures are going to work.</h3>
+					<p>Each lecture will be split into four 15 minute sections:</p>
+					<ol>
+						<li>Graphic Design - via <a href="https://runemadsen.com/">Rune Madsen</a>'s course <a href="http://printingcode.runemadsen.com/">"Programming Design Systems"</a>.</li>
+						<li>Computational Thinking - via <a href="https://almossawi.com/">Ali Almossawi</a>'s book <a href="https://bookofbadchoices.com/">"Bad Choices"</a>.</li>
+						<li>An important programming concept - via the <a href="https://processing.org/">Processing Foundation</a>.</li>
+						<li>Applying that concept in p5.js - building towards making an Animated GIF maker, via <a href="http://joelgethinlewis.com/altered-images/">an older set of lectures for CSM in 2014</a>, but updated for p5.js.</li>
+					</ol>
+				</section>
+				<section>
+					<h3>How to be lazy like a fox.</h3>
+					<p>A quote from <a href="http://www.catb.org/~esr/">Eric S. Raymond</a>'s <a href="http://www.catb.org/~esr/writings/cathedral-bazaar/">"The Cathedral and the Bazaar"</a> quoting <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a>:</p>
+					<p><q cite="http://www.catb.org/~esr/writings/cathedral-bazaar/">&ldquo;In fact, I think Linus's cleverest and most consequential hack was not the construction of the Linux kernel itself, but rather his invention of the Linux development model. When I expressed this opinion in his presence once, he smiled and quietly repeated something he has often said: "I'm basically a very lazy person who likes to get credit for things other people actually do." Lazy like a fox. Or, as Robert Heinlein famously wrote of one of his characters, too lazy to fail.&rdquo;</q></p>
+				</section>
+				<section>
+					<h3>How to be lazy like a fox. (continued)</h3>
+					<p><a href="http://www.wall.org/~larry/">Larry Wall</a> also has some thoughts about laziness: <q cite="http://wiki.c2.com/?LazinessImpatienceHubris">&ldquo;The quality that makes you go to great effort to reduce overall energy expenditure. It makes you write labor-saving programs that other people will find useful, and document what you wrote so you don't have to answer so many questions about it. Hence, the first great virtue of a programmer.&rdquo;</q></p>
+					<p>I originally heard the quote in a <a href="https://vimeo.com/79376295">talk</a> by <a href="http://www.evan-roth.com/">Evan Roth</a>.</p>
+				</section>
+				<section>
+					<h3>The History of Graphic Design and the History of Graphic Computers.</h3>
+					<p>Thanks again to Rune Madsen for putting his course online:</p>
+					<p><a href="http://printingcode.runemadsen.com/lecture-intro/">http://printingcode.runemadsen.com/lecture-intro/</a>.</p>
+					<p>Don't forget to click to the slides and press 's' Joel!</p>
+					<p>Rune's lectures are very biased to the US side of things - a big UK moment was <a href="https://www.ica.art/whats-on/cybernetic-serendipity-documentation">in 1968 with the "Cybernetic Serendipity" exhibition at the ICA</a>. What about where you are from?</p>
+				</section>
+				<section>
+					<h3>What Computational Thinking is and why it's important to everyone (even Graphic Designers).</h3>
+					<p>Thanks again to Ali Almossawi for writing his book.</p>
+					<p>Read the preface and introduction to "Bad Choices" Joel!</p>
+					<p>Why is it important? We have big problems to solve, and it's good to solve them better.</p>
+				</section>
+				<section>
+					<h3>Computational Thinking is a way to optimise your interactions with the world.</h3>
+					<p><a href="https://commons.wikimedia.org/wiki/File:Comparison_computational_complexity.svg#/media/File:Comparison_computational_complexity.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg" alt="Comparison computational complexity.svg" height="256" width="256"></a></p>
+					<p><a href="https://en.wikipedia.org/wiki/Time_complexity">N is the number of operations and n is the number of inputs</a>. <a href="https://stackoverflow.com/questions/487258/what-is-a-plain-english-explanation-of-big-o-notation">More explanation</a>.</p>
+				</section>
+				<section>
+					<h3>Graphical Computational Thinking is about building your own tools.</h3>
+					<p>Instead of just using everyone else's tools, wouldn't be able to great to make your own?</p>
+					<p>That way you could make unique things, share them with others and build a practice around it.</p>
+				</section>
+				<section>
+					<h3>How to count.</h3>
+					<ul>
+						<li><a href="https://en.wikipedia.org/wiki/Binary_numeral_system">Binary</a> is a <a href="https://en.wikipedia.org/wiki/Numeral_system">numeral system</a>, that is a writing system for expressing numbers. <a href="https://en.wikipedia.org/wiki/Decimal_numeral_system">Decimal</a> is the numeral system that you are probably most familiar with - but you also already know <a href="https://en.wikipedia.org/wiki/Unary_numeral_system">Unary</a> too!</li>
+						<li>Unary just uses the same number of things as the thing you are counting. <a href="https://en.wikipedia.org/wiki/Tally_marks">Tally marks</a> are unary.</li>
+						<li>Another way of thinking about Unary is that it's a numeral system with only one graphical symbol. Decimal has 10 graphical symbols: 0,1,2,3,4,5,6,7,8,9.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>How to count in Binary.</h3>
+					<ul>
+						<li>Binary uses two graphical symbols to count with - lets pick the first two used in Decimal: 0 and 1.</li>
+						<li>Another way of thinking about 0 and 1 is Nothing and Something.</li>
+						<li>Let's make up Binary together.</li>
+						<li>What symbol shall we use to represent zero?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>What symbol shall we use to represent zero?</h3>
+					<ul>
+						<li>0. Or Nothing.</li>
+						<li>What symbol shall we use to represent one?</li>
+						<li>1. Or Something.</li>
+						<li>How should we represent two?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>How should we represent two?</h3>
+					<ul>
+						<li>We can't use 0 or 1 because we've already used those. We don't have any symbols left! We need to use two symbols. We have four options: 00 or 01 or 10 or 11.</li>
+						<li>Reading from the left (which is not always the way!) 00 is Nothing Nothing, or just Nothing, or 0 - which we've already used. 01 is Nothing Something, or just Something, or 1 which we've already used. We have two options left: 10 or 11. Which symbols should we use to represent two?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Should two be represented by 10 or 11?</h3>
+					<ul>
+						<li>Which is simpler? Which is smaller?</li>
+						<li>11 aka Something Something, or 10 aka Something Nothing.</li>
+						<li>10 is simpler! So what about three?</li>
+						<li>We only have 11 left, so that should be three. What about four?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>How should we represent four?</h3>
+					<ul>
+						<li>We need another symbol!</li>
+						<li>We need three symbols in a row, that we haven't used already.</li>
+						<li>What options to we have? 000, 001, 010, 011, 100, 101, 110, 111.</li>
+						<li>We've used 000, 010 and 011 already. Which is the next simplest?</li>
+						<li>100 is simpler than 101, 110 and 111.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Things to think about.</h3>
+					<ul>
+						<li>This is how all digital information in the world is represented. Using binary numbers. Something or nothing.</li>
+						<li>You now know the programmer joke - <q>&ldquo;There are only 10 types of people in the world - those that understand binary and those that don't&rdquo;</q></li>
+						<li>Can you count to 10 using binary?</li>
+						<li>Using your fingers as binary digits, how high can you count with the fingers of one hand? With both hands? With hands and toes?</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Thanks!</h2>
+					<ul>
+						<li>More about me: <a href="https://twitter.com/joelgethinlewis">@joelgethinlewis</a></li>
+						<li>Get in contact via <a href="https://crosslab-gcdcsm.slack.com">crosslab-gcdcsm.slack.com</a></li>
+						<li>Website:<br><a href="https://jgl.github.io/ComputationalThinking/">https://jgl.github.io/ComputationalThinking</a></li>
+						<li>Today's slides:<br><a href="https://jgl.github.io/ComputationalThinking/lecture1.html">https://jgl.github.io/ComputationalThinking/lecture1.html</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				// Display controls in the bottom right corner
+   				//controls: false,
+				// Display the page number of the current slide
+    			slideNumber: 'c/t',
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

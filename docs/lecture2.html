@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Computational Thinking: Joel Gethin Lewis: Lecture 2.</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Computational Thinking</h2>
+					<p>Joel Gethin Lewis</p>
+					<p>Lecture 2</p>
+				</section>
+				<section>
+					<h3>What I'm going to talk about today:</h3>
+					<ol>
+						<li>Student FAQ</li>
+						<li>Form.</li>
+						<li>Matching socks and finding your size.</li>
+						<li>Introduction to p5.js.</li>
+						<li>Variables and Data Types in JavaScript.</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Student FAQ</h3>
+					<ul>
+						<li>Why learn code?</li>
+						<li>I was bad in maths - will I ever learn code?</li>
+						<li>What coding languages are out there, what's the difference and similarity?</li>
+						<li>Which coding language should I learn?</li>
+						<li>What is a code editor and which one should I use?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Student FAQ PS</h3>
+					<ul>
+						<li>"Using Programming Language Concepts to Teach General Thinking Skills" by Martin Rinard</li>
+						<li><a href="https://people.csail.mit.edu/rinard/paper/wowcs08.pdf">https://people.csail.mit.edu/rinard/paper/wowcs08.pdf</a></li>
+						<li>"The field of programming languages provides a uniquely favourable context for teaching certain fundamental concepts that arise in almost all modern human endeavours. These concepts include:"</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Student FAQ PS</h3>
+						<ul>
+							<li>Understanding the central role that one’s perspective plays in the entire problem conceptualization, formulation, and solution process,</li>
+							<li>Understanding that multiple perspectives are available, with different perspectives appropriate for different problems,</li>
+						</ul>
+				</section>
+				<section>
+					<h3>Student FAQ PS</h3>
+						<ul>
+							<li>Understanding how automation can greatly improve human productivity and that there is an appropriate division of tasks between automated systems and humans, and</li>
+							<li>Understanding a precise notion of abstraction, that abstraction is inevitably present in every activity, and that different abstractions are appropriate for different purposes and situations.</li>
+						</ul>
+				</section>
+				<section>
+					<h3>Form.</h3>
+					<p>Thanks again to Rune Madsen for putting his course online:</p>
+					<p><a href="http://printingcode.runemadsen.com/lecture-form/">http://printingcode.runemadsen.com/lecture-form/</a>.</p>
+					<p><a href="http://printingcode.runemadsen.com/lecture-form-2/">http://printingcode.runemadsen.com/lecture-form-2/</a>.</p>
+					<p>Don't forget to click to the slides and press 's' Joel!</p>
+				</section>
+				<section>
+					<h3>Matching socks and finding your size.</h3>
+					<p>Thanks again to Ali Almossawi for writing his book.</p>
+					<p>Read the Matching socks and Finding your size chapters of "Bad Choices" Joel!</p>
+				</section>
+				<section>
+					<h3>Introduction to p5.js.</h3>
+					<p>The website for p5.js is: <a href="https://p5js.org/">https://p5js.org</a></p>
+					<p>The following content is all from the <a href="https://p5js.org/learn/">"Learn"</a> section of the p5.js website.</p>
+					<p><a href="http://hello.p5js.org/">Hello p5.js</a> and <a href="https://p5js.org/get-started/">Get Started</a> and finally some <a href="https://p5js.org/examples/">Examples</a>.</p>
+					<p>Don't forget you can right click or CTRL click any time to save a png!</p>
+				</section>
+				<section>
+					<h3>Variables and Data Types in JavaScript.</h3>
+					<p>Before we get on to how JavaScript stores information in Variables and Data Types, I want to go back to the previous lecture. Remember how we learnt to count in binary?</p>
+					<p>Does anyone know what a Megabyte is?</p>
+				</section>
+				<section>
+					<h3>Variables and Data Types in JavaScript.</h3>
+					<p>A million bytes! <a href="https://en.wikipedia.org/wiki/Megabyte">(Actually a bit more)</a>.</p>
+					<p>What is a byte?</p>
+				</section>
+				<section>
+					<h3>Variables and Data Types in JavaScript.</h3>
+					<p>A byte is 8 bits.</p>
+					<p>(I remember this by saying Beight in my head).</p>
+					<p>What is a bit?</p>
+				</section>
+				<section>
+					<h3>Variables and Data Types in JavaScript.</h3>
+					<p>A bit is a Binary digIT.</p>
+					<p>A 1 or a 0.</p>
+					<p>So everything stored on a computer is just a 1 or a 0.</p>
+				</section>
+				<section>
+					<h3>Variables and Data Types in JavaScript.</h3>
+					<p>Turns out it's <a href="http://www.bbc.co.uk/education/guides/zp73wmn/revision">much easier to encode binary numbers as hexadecimal numbers to make them a bit more readable</a>.</p>
+					<p>Hexadecimal means base 16! So: 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F.</p>
+				</section>
+				<section>
+					<h3>Variables and Data Types in JavaScript.</h3>
+					<p>Each byte (eight bits) can be encoded as two base 16 numbers.</p>
+					<p>11010100 in binary would be D4 in hex.</p>
+					<p>FFFF3 in hex would be 11111111111111110011 in binary!</p>
+				</section>
+				<section>
+					<h3>Variables and Data Types in JavaScript.</h3>
+					<p>Lets open a JPEG in a Hex Editor to see what it looks like.</p>
+					<p>Open BobDylanSelfPortraitSigned.jpg.</p>
+					<p>We can see when the photo was taken and with which camera!</p>
+					<p>Lots of files have this kind of information encoded in them. Usually in <a href="https://en.wikipedia.org/wiki/ASCII">ASCII encoding</a>.</p>
+					<p>Demonstrate looking up A in the editor in a <a href="http://ascii.cl/">ASCII table</a>.</p>
+				</section>
+				<section>
+					<h3>Variables and Data Types in JavaScript.</h3>
+					<p>The following content is all from the <a href="https://github.com/processing/p5.js/wiki/JavaScript-basics">JavaScript Basics</a> section of the <a href="https://github.com/processing/p5.js/wiki">p5.js wiki</a>.</p>
+					<p><a href="https://github.com/processing/p5.js/wiki/JavaScript-basics#script-tag">How JavaScript gets added to webpages</a>.</p>
+					<p><a href="https://github.com/processing/p5.js/wiki/JavaScript-basics#console">The JavaScript console</a>.</p>
+					<p><a href="https://github.com/processing/p5.js/wiki/JavaScript-basics#variables">Variables</a>.</p>
+					<p><a href="https://github.com/processing/p5.js/wiki/JavaScript-basics#data-types">Types: Numbers, Strings and Booleans</a>.</p>
+					<p><a href="https://github.com/processing/p5.js/wiki/JavaScript-basics#assignment">Assignment</a> and <a href="https://github.com/processing/p5.js/wiki/JavaScript-basics#operators">operators.</p>
+				</section>
+				<section>
+					<h2>Thanks!</h2>
+					<ul>
+						<li>More about me: <a href="https://twitter.com/joelgethinlewis">@joelgethinlewis</a></li>
+						<li>Get in contact via <a href="https://crosslab-gcdcsm.slack.com">crosslab-gcdcsm.slack.com</a></li>
+						<li>Website:<br><a href="https://jgl.github.io/ComputationalThinking/">https://jgl.github.io/ComputationalThinking</a></li>
+						<li>Today's slides:<br><a href="https://jgl.github.io/ComputationalThinking/lecture2.html">https://jgl.github.io/ComputationalThinking/lecture2.html</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				// Display controls in the bottom right corner
+   				//controls: false,
+				// Display the page number of the current slide
+    			slideNumber: 'c/t',
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
