@@ -4,11 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Computational Thinking: Joel Gethin Lewis: Lecture 6.</title>
+		<title>Computational Thinking: Lecture 6: Looping</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<!-- <link rel="stylesheet" href="css/theme/black.css"> -->
-		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -28,91 +27,32 @@
 				<section>
 					<h2>Computational Thinking</h2>
 					<p>Joel Gethin Lewis</p>
-					<p>Lecture 6</p>
+					<p>Lecture 6: Looping</p>
 				</section>
 				<section>
 					<h3>What I'm going to talk about today:</h3>
 					<ol>
-						<li>Repetition.</li>
-						<li>Fixing necklaces.</li>
-						<li>How to load a gif in p5.js.</li>
-						<li>How to make a GUI (Graphical User Interface) in p5.js to display frames of a gif.</li>
+						<li>Boolean logic, for and while loops.</li>
+						<li>Functions and Recursion.</li>
+						<li>Object-oriented programming.</li>
+						<li>The Jacquard Loom, Charles Babbage and Ada Lovelace.</li>
+						<li>Turing, Tommy Flowers, Bugs and Hacking.</li>
+						<li>Bonus: Fuzzy logic and Neural Networks.</li>
 					</ol>
 				</section>
 				<section>
-					<h3>Repetition.</h3>
-					<p>Thanks again to Rune Madsen for putting his course online:</p>
-					<p><a href="http://printingcode.runemadsen.com/lecture-repetition/">http://printingcode.runemadsen.com/lecture-repetition/</a></p>
-					<p>Don't forget to click to the slides and press 's' Joel!</p>
-				</section>
-				<section>
-					<h3>Fixing necklaces.</h3>
-					<p>Thanks again to Ali Almossawi for writing his book.</p>
-					<p>Read the Fixing necklaces chapter of "Bad Choices" Joel!</p>
-				</section>
-				<section>
-					<h3>How to load a gif in p5.js.</h3>
-					<p>Next we'd like to get on with the work that we set for ourselves in lecture one - to make an Animated GIF maker.</p>
-					<p>So how do I load animated gifs in p5.js?</p>
-					<p>Google: <a href="https://www.google.co.uk/search?q=animated+gif+p5.js">"animated gif p5.js"</a></p>
-				</section>
-				<section>
-					<h3>How to load a gif in p5.js.</h3>
-					<p><a href="https://github.com/antiboredom/p5.gif.js/tree/master">https://github.com/antiboredom/p5.gif.js/tree/master</a> looks great!</p>
-					<p>So lets download it.</p>
-					<p>And try it, by opening the file in the browser.</p>
-				</section>
-				<section>
-					<h3>How to load a gif in p5.js.</h3>
-					<p>It doesn't work. )-;</p>
-					<p>Don't panic! Lets look at the in JavaScript Console.</p>
-					<p>Hmmm. I don't know what that means, lets Google: <a href="https://www.google.co.uk/search?q=p5.js+Cross+origin+error">"p5.js cross origin error"</p>
-				</section>
-				<section>
-					<h3>How to load a gif in p5.js.</h3>
-					<p>Looks like I have to <a href="https://github.com/processing/p5.js/wiki/Local-server">install a server for p5.js</a>.</p>
-					<p>Lets follow the instructions to install node.js.</p>
-					<p>CAUTION: COMMAND LINE INTERFACE WARNING!</p>
-					<p>Let's go to the folder that contains the file we are trying to get working and run the webserver inside it, by dragging and dropping the folder onto the Terminal icon and running: "http-server -c-1".</p>
-					<p>Of course, we can use any gif we like with this program! Demo using giphy.gif instead.</p>
-				</section>
-				<section>
-					<h3>How to make a GUI (Graphical User Interface) in p5.js to display frames of a gif.</h3>
-					<p>Wouldn't it be great to be able to slide a slider instead of having to hold my mouse in one place?</p>
-					<p>Let's use a GUI library to let us do that via the <a href="https://p5js.org/libraries/">p5.js libraries page</a>.</p>
-					<p><a href="https://p5js.org/reference/#/libraries/p5.dom">p5.dom</a> looks good. Let's download it and try it.</p>
-				</section>
-				<section>
-					<h3>How to make a GUI (Graphical User Interface) in p5.js to display frames of a gif.</h3>
-					<p>The <a href="https://p5js.org/examples/">DOM examples</a> look good. So lets start with the old gif example from p5.gif.js and go from there.</p>
-					<p>OK, lets add the most basic p5.dom to it, just with both running together in the same sketch.js. First look at index.html and then sketch.js from the <a href="https://p5js.org/examples/dom-slider.html">Slider p5.DOM example</a> and then duplicate them over.</p>
-				</section>
-				<section>
-					<h3>How to make a GUI (Graphical User Interface) in p5.js to display frames of a gif.</h3>
-					<p>So now we have both running together, we can disable the mouse movement code, as we want it to be controlled by the GUI.</p>
-					<p>We cam get rid of both the G and B sliders too.</p>
-					<p>We can edit R to be called something better...</p>
-				</section>
-				<section>
-					<h3>How to make a GUI (Graphical User Interface) in p5.js to display frames of a gif.</h3>
-					<p>So lets set it to myFrame, and change to display the correct frame.</p>
-					<p>But how do I know the correct range?</p>
-					<p>That doesn't seem to be working, lets add console.log to see what is going on.</p>
-					<p>It's saying 0? I guess the gif hasn't loaded at that point.</p>
-				</section>
-				<section>
-					<h3>How to make a GUI (Graphical User Interface) in p5.js to display frames of a gif.</h3>
-					<p>So lets keep checking until it is loaded, THEN add the GUI</p>
-					<p>Use a boolean value! (I use this all the time in my code).</p>
-					<p>We can even display a loading message while we are waiting. How do we do that? Google <a href="https://www.google.com/search?q=displaying+text+in+p5.js">"displaying text in p5.js"</a>.</p>
+					<h3>1. Boolean logic, for and while loops.</h3>
+					<ol>
+						<li>.</li>
+					</ol>
 				</section>
 				<section>
 					<h2>Thanks!</h2>
 					<ul>
 						<li>More about me: <a href="https://twitter.com/joelgethinlewis">@joelgethinlewis</a></li>
-						<li>Get in contact via <a href="https://crosslab-gcdcsm.slack.com">crosslab-gcdcsm.slack.com</a></li>
-						<li>Website:<br><a href="https://jgl.github.io/ComputationalThinking/">https://jgl.github.io/ComputationalThinking</a></li>
-						<li>Today's slides:<br><a href="https://jgl.github.io/ComputationalThinking/lecture6.html">https://jgl.github.io/ComputationalThinking/lecture6.html</a></li>
+						<li>Get in contact via: <a href="https://crosslab-gcdcsm.slack.com">crosslab-gcdcsm.slack.com</a></li>
+						<li>Website:<br><a href="https://jgl.github.io/ComputationalThinking2018/">https://jgl.github.io/ComputationalThinking2018</a></li>
+						<li>Today's slides:<br><a href="https://jgl.github.io/ComputationalThinking2018/lecture6.html">https://jgl.github.io/ComputationalThinking2018/lecture6.html</a></li>
 					</ul>
 				</section>
 			</div>
@@ -122,15 +62,17 @@
 		<script src="js/reveal.js"></script>
 
 		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				// Push each slide change to the browser history
 				history: true,
-				// Display controls in the bottom right corner
-   				//controls: false,
+				// Display a presentation progress bar
+				progress: true,
 				// Display the page number of the current slide
-    			slideNumber: 'c/t',
+				slideNumber: 'c/t',
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },

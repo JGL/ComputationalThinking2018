@@ -4,11 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Computational Thinking: Joel Gethin Lewis: Lecture 4.</title>
+		<title>Computational Thinking: Lecture 4: Compressing</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<!-- <link rel="stylesheet" href="css/theme/black.css"> -->
-		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -28,117 +27,32 @@
 				<section>
 					<h2>Computational Thinking</h2>
 					<p>Joel Gethin Lewis</p>
-					<p>Lecture 4</p>
+					<p>Lecture 4: Compressing</p>
 				</section>
 				<section>
 					<h3>What I'm going to talk about today:</h3>
 					<ol>
-						<li>Grids and Logos.</li>
-						<li>Sort that post and be more hip.</li>
-						<li>Conditionals and Loops in JavaScript.</li>
-						<li>Introduction to images in p5.js</li>
-						<li>Comments and code formatting.</li>
+						<li>Moving from two dimensions to three (and four).</li>
+						<li>Eadweard Muybridge and Étienne-Jules Marey.</li>
+						<li>Text compression.</li>
+						<li>Spatial compression and Temporal compression.</li>
+						<li>The Fast Fourier transform.</li>
+						<li>Bonus: three kinds of feedback: audio, visual and interactive.</li>
 					</ol>
 				</section>
 				<section>
-					<h3>Grids and Logos.</h3>
-					<p>Thanks again to Rune Madsen for putting his course online:</p>
-					<p><a href="http://printingcode.runemadsen.com/lecture-grid/">http://printingcode.runemadsen.com/lecture-grid/</a></p>
-					<p><a href="http://printingcode.runemadsen.com/lecture-logo/">http://printingcode.runemadsen.com/lecture-logo/</a></p>
-					<p>Don't forget to click to the slides and press 's' Joel!</p>
-				</section>
-				<section>
-					<h3>Sort that post and be more hip.</h3>
-					<p>Thanks again to Ali Almossawi for writing his book.</p>
-					<p>Read the Sort that post and Be more hip chapters of "Bad Choices" Joel!</p>
-				</section>
-				<section>
-					<h3>Stop press!</h3>
-					<p>This got posted last week and I just had to share. A bit more on the modulo operator and why it is useful from Golan Levin, who has helped me hugely over the past 20 years.</p>
-					<p><iframe width="560" height="315" src="https://www.youtube.com/embed/r5Iy3v1co0A?rel=0" frameborder="0" allowfullscreen></iframe></p>
-				</section>
-				<section>
-					<h3>Conditionals and Loops in JavaScript.</h3>
-					<p>The following content is all from the <a href="https://github.com/processing/p5.js/wiki/JavaScript-basics">JavaScript Basics</a> section of the <a href="https://github.com/processing/p5.js/wiki">p5.js wiki</a>.</p>
-					<p><a href="https://github.com/processing/p5.js/wiki/JavaScript-basics#conditionals">Conditionals in JavaScript</a>.</p>
-					<p><a href="https://github.com/processing/p5.js/wiki/JavaScript-basics#loops">Loops in JavaScript</a>.</p>
-					<p>Don't forget we can try everything in the <a href="https://github.com/processing/p5.js/wiki/JavaScript-basics#console">JavaScript console</a> without even having to add it to a p5.js program.</p>
-				</section>
-				<section>
-					<h3>Introduction to images in p5.js</h3>
-					<p>Now that we know about colour in p5.js and we know about arrays, we are ready to tackle images in p5.js</p>
-					<p>An image is a grid of pixel colour values - R, G, B and an optional Alpha value.</p>
-					<p>Each pixel colour value stored as an 8 bit number</p>
-					<p>How many different values can you store in 8 bits?</p>
-				</section>
-				<section>
-					<h3>Introduction to images in p5.js</h3>
-					<p>How many different values can you store in 8 bits?</p>
-					<p>2*2*2*2*2*2*2*2 or 2^8 or 256</p>
-					<p>So we have a range from 0-255 for each pixel colour value - 0 is a number too!</p>
-					<p>How do we make a grid of values using arrays?</p>
-				</section>
-				<section>
-					<h3>Introduction to images in p5.js</h3>
-					<p>How do we make a grid of values using arrays?</p>
-					<p>We could make one massive list or array with all the pixel values</p>
-					<p>How big would that list have to be?</p>
-				</section>
-				<section>
-					<h3>Introduction to images in p5.js</h3>
-					<p>How big would that list have to be?</p>
-					<p>We'd need width*height*4 slots in our big list</p>
-					<p>But that would make things a bit difficult to change or edit...</p>
-					<p>So lets make a list of lists or an array of arrays!</p>
-				</section>
-				<section>
-					<h3>Introduction to images in p5.js</h3>
-					<p>So lets make a list of lists or an array of arrays!</p>
-					<p>Make one list with width elements, and for every element in that list, store another list of height elements</p>
-					<p>You can then address the pixel at (x,y) by accessing the element pixels[x][y] - use two array operators</p>
-				</section>
-				<section>
-					<h3>Introduction to images in p5.js</h3>
-					<p>Don't forget that you measure from the top of the screen rather than from the bottom!</p>
-					<p>Let's start by looking at the p5.js reference, the place where all the functions you can use in p5.js are listed.</p>
-					<p>Let's see if they have anything about images...</p>
-					<p><a href="https://p5js.org/reference/">https://p5js.org/reference/</a></p>
-				</section>
-				<section>
-					<h3>Introduction to images in p5.js</h3>
-					<p>Let's take a look at the createImage() function, and play with the examples provided:</p>
-					<p><a href="https://p5js.org/reference/#/p5/createImage">https://p5js.org/reference/#/p5/createImage</a></p>
-					<p>The last example is a bit strange, let's correct it (not everything on the internet is correct )-;). Pixel density is still a bit of a problem on the web.</p>
-					<p>I find the p5.js reference super useful - I usually have it open in a browser whenever I'm coding - it's not a memory test so use all the help you can find.</p>
-				</section>
-				<section>
-					<h3>Comments and code formatting.</h3>
-					<p>To finish up today, I'm going to talk about two really important parts of coding that don't have anything to do with how the computer reads your code - rather how other humans can read your code.</p>
-				</section>
-				<section>
-					<h3>Comments and code formatting.</h3>
-					<p>Comments are a really useful way of writing notes to yourself (or others) to explain how your code works.</p>
-					<p><a href="https://github.com/processing/p5.js/wiki/JavaScript-basics#comments">https://github.com/processing/p5.js/wiki/JavaScript-basics#comments</a>.</p>
-					<p>You don't have to add a comment for every line, but I find it really helps me when I haven't looked at code for a while. It also helps others! It would have been really useful to have comments on the previous createImage example, wouldn't it? </p>
-				</section>
-				<section>
-					<h3>Comments and code formatting.</h3>
-					<p>Finally, when you make new curly braces (either for a new function or a loop) you should indent your code.</p>
-					<p><a href="https://github.com/processing/p5.js/wiki/JavaScript-basics#indentation">https://github.com/processing/p5.js/wiki/JavaScript-basics#indentation</a>.</p>
-					<p>Most good editors (like <a href="https://www.sublimetext.com/">Sublime Text 3</a>) will do indentation for you automatically, and tidy your code for you too. See Edit > Line > Reindent in ST3.</p>
-					<p>I always use tabs rather than spaces. This is another long standing programming joke/argument/destroyer of relationships...</p>
-				</section>
-				<section>
-					<h3>Comments and code formatting.</h3>
-					<p><iframe width="560" height="315" src="https://www.youtube.com/embed/SsoOG6ZeyUI?rel=0" frameborder="0" allowfullscreen></iframe></p>
+					<h3>1. Moving from two dimensions to three (and four).</h3>
+					<ol>
+						<li>Going from a line to a square.</li>
+					</ol>
 				</section>
 				<section>
 					<h2>Thanks!</h2>
 					<ul>
 						<li>More about me: <a href="https://twitter.com/joelgethinlewis">@joelgethinlewis</a></li>
-						<li>Get in contact via <a href="https://crosslab-gcdcsm.slack.com">crosslab-gcdcsm.slack.com</a></li>
-						<li>Website:<br><a href="https://jgl.github.io/ComputationalThinking/">https://jgl.github.io/ComputationalThinking</a></li>
-						<li>Today's slides:<br><a href="https://jgl.github.io/ComputationalThinking/lecture4.html">https://jgl.github.io/ComputationalThinking/lecture4.html</a></li>
+						<li>Get in contact via: <a href="https://crosslab-gcdcsm.slack.com">crosslab-gcdcsm.slack.com</a></li>
+						<li>Website:<br><a href="https://jgl.github.io/ComputationalThinking2018/">https://jgl.github.io/ComputationalThinking2018</a></li>
+						<li>Today's slides:<br><a href="https://jgl.github.io/ComputationalThinking2018/lecture4.html">https://jgl.github.io/ComputationalThinking2018/lecture4.html</a></li>
 					</ul>
 				</section>
 			</div>
@@ -148,15 +62,17 @@
 		<script src="js/reveal.js"></script>
 
 		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				// Push each slide change to the browser history
 				history: true,
-				// Display controls in the bottom right corner
-   				//controls: false,
+				// Display a presentation progress bar
+				progress: true,
 				// Display the page number of the current slide
-    			slideNumber: 'c/t',
+				slideNumber: 'c/t',
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
