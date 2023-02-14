@@ -1,151 +1,149 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Computational Thinking: Lecture 6: Looping</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/whiteJGL.css">
+	<title>Computational Thinking: Lecture 6: Looping</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h2>Computational Thinking</h2>
-					<p>Joel Gethin Lewis</p>
-					<p>Lecture 6: Looping</p>
-				</section>
-				<section>
-					<h3>What I'm going to talk about today:</h3>
-					<ol>
-						<li>Boolean algebra and control flow.</li>
-						<li>Functions and recursion.</li>
-						<li>Object-oriented programming.</li>
-						<li>The Jacquard Loom, Charles Babbage and Ada Lovelace.</li>
-						<li>Pāṇini, al-Khwarizmi, al-Jazari, Alan Turing, Tommy Flowers, Grace Hopper, Margaret Hamilton, Bugs and Hacking.</li>
-						<li>Bonus: Fuzzy logic, Computer Vision and Neural Networks.</li>
-					</ol>
-				</section>
-				<section>
-					<h3>1. Boolean algebra and control flow.</h3>
-					<ul>
-						<li><a href="https://en.wikipedia.org/wiki/Boolean_algebra">Boolean algebra</a>, named after <a href="https://en.wikipedia.org/wiki/George_Boole">George Boole</a>. The <a href="https://en.wikipedia.org/wiki/Boolean_data_type">Boolean data type</a> is a common to most programming languages - only two values - True (1) or False (0). One is true, nothing is false.</li>
-						<li>Boolean operators allow you to combine or invert boolean data types - the three basic ones are AND, OR and NOT.</li>
-						<li>Control flow in programming is how you control the flow of which part of the program is executed next.</li>
-						<li><a href="https://en.wikipedia.org/wiki/Conditional_(computer_programming)">Conditional statements</a>, such as if statements are very common.</li>
-						<li>Loops such as <a href="https://en.wikipedia.org/wiki/While_loop">while loops</a> and <a href="https://en.wikipedia.org/wiki/For_loop">for loops</a> are also very common.</li>
-					</ul>
-				</section>
-				<section>
-					<h3>2. Functions and recursion.</h3>
-					<ul>
-						<li>Instead of writing long lists of commands, one after another, functions allow programmers to package up functionality into smaller mini programs, known as <a href="https://en.wikipedia.org/wiki/Subroutine">functions or subroutines</a>.</li>
-						<li>Take input and return an output - an example might be a function that returns the square of an input number, or as complicated as <a href="https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker's_Guide_to_the_Galaxy">the answer to everything</a>.</li>
-						<li><a href="https://en.wikipedia.org/wiki/Recursion">Recursion</a> is when something is defined in terms of itself. <a href="https://en.wikipedia.org/wiki/Recursion#Recursive_humor">Recursive humour is funny</a>. Recursion is also found in graphic design, art and cooking. In <a href="https://en.wikipedia.org/wiki/Recursion_(computer_science)">computer science recursion</a> is when a function calls itself repeatedly. The method of working out the <a href="https://en.wikipedia.org/wiki/Recursion_(computer_science)#Recursive_procedures">Factorial of any number</a> is a classic example.</li>
-						<li>A <a href="https://en.wikipedia.org/wiki/Fractal">fractal</a> is a good example of something that is visually recursive.</li>
-					</ul>
-				</section>
-				<section>
-					<h3>3. Abstraction and Object-oriented programming.</h3>
-					<ul>
-						<li><a href="https://en.wikipedia.org/wiki/Abstraction">Abstraction</a> is a concept that has been applied to many fields, including <a href="https://en.wikipedia.org/wiki/Abstract_art">art</a> and <a href="https://en.wikipedia.org/wiki/Abstraction_(computer_science)">computer science</a>.</li>
-						<li>Abstraction is a key feature of <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object orientated programming</a>.</li>
-						<li><a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a> is an example of an object orientated language. <a href="https://en.wikipedia.org/wiki/C_%28programming_language%29">C</a> was one of its predecessors and functional. The ++ means increment, hence C++ being one better than C. (-;</li>
-						<li>There are many <a href="https://en.wikipedia.org/wiki/Comparison_of_programming_paradigms">different ways of programming, also known as paradigms</a>.</li>
-						<li>Two amusing languages are <a href="https://en.wikipedia.org/wiki/Brainfuck">Brainfuck</a> and <a href="https://en.wikipedia.org/wiki/Whitespace_(programming_language)">Whitespace</a>, there are many other <a href="https://en.wikipedia.org/wiki/Esoteric_programming_language">Esoteric languages</a>. (-;</li>
-					</ul>
-				</section>
-				<section>
-					<h3>4. The Jacquard Loom, Charles Babbage and Ada Lovelace.</h3>
-					<ul>
-						<li><a href="https://en.wikipedia.org/wiki/Jacquard_loom">The Jacquard Loom</a> was the worlds first programmable object.</li>
-						<li>Interestingly, the word <a href="https://en.wikipedia.org/wiki/Sabotage">sabotage</a> comes from French workers using their sabots or clogs to destroy machines, perhaps.</li>
-						<li><a href="https://en.wikipedia.org/wiki/Charles_Babbage">Charles Babbage</a> is the inventor of the concept of a digital computer. Babbage was aware of the Jacquard Loom and expanded upon the punch card to invent both the <a href="https://en.wikipedia.org/wiki/Difference_engine">Difference Engine</a> and the <a href="https://en.wikipedia.org/wiki/Analytical_Engine">Analytical Engine</a>.</li>
-						<li><a href="https://en.wikipedia.org/wiki/Ada_Lovelace">Ada Lovelace</a> was the worlds first computer programmer, even realising that the computer could be used to make music and art.</li>
-					</ul>
-				</section>
-				<section>
-					<h3>5. Pāṇini, al-Khwarizmi, al-Jazari, Alan Turing, Tommy Flowers, Grace Hopper, Margaret Hamilton, Bugs and Hacking.</h3>
-					<ul>
-						<li><a href="https://en.wikipedia.org/wiki/P%C4%81%E1%B9%87ini">Pāṇini</a> pioneered a grammar that incorporated metarules and recursion - making the first <a href="https://en.wikipedia.org/wiki/Formal_language">formal language</a>.</li>
-						<li><a href="https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi">Muhammad ibn Musa al-Khwarizmi</a> formalised algebra, his name gave rise to the word algorithm and introduced the decimal system to the western world.</li>
-						<li><a href="https://en.wikipedia.org/wiki/Ismail_al-Jazari">Ismail al-Jazari</a> invented programmable machines, including programmable humanoid robots and an astronomical clock considered the first programmable analog computer.</li>
-					</ul>
-				</section>
-				<section>
-					<h3>5. Pāṇini, al-Khwarizmi, al-Jazari, Alan Turing, Tommy Flowers, Grace Hopper, Margaret Hamilton, Bugs and Hacking (continued).</h3>
-					<ul>
-						<li><a href="https://en.wikipedia.org/wiki/Alan_Turing">Alan Turing</a> formalised the concept of the algorithm and computation in general. During the Second World War he led the team that broke German Naval codes. He went on to design one of the first stored program computers and did pioneering work in <a href="https://en.wikipedia.org/wiki/Morphogenesis">Morphogenesis</a>, or how living things form themselves. He was prosecuted by the British Government for being gay, and committed suicide in 1954. If an system is capable of general computation it is said to be <a href="https://en.wikipedia.org/wiki/Turing_completeness">Turing complete</a>. The <a href="https://en.wikipedia.org/wiki/Turing_test">Turing test</a> is a test of machine intelligence in comparison to human intelligence.</li>
-						<li><a href="https://en.wikipedia.org/wiki/Tommy_Flowers">Tommy Flowers</a> was the engineer who built Turing's machine.</li>
-					</ul>
-				</section>
-				<section>
-					<h3>5. Pāṇini, al-Khwarizmi, al-Jazari, Alan Turing, Tommy Flowers, Grace Hopper, Margaret Hamilton, Bugs and Hacking (continued).</h3>
-					<ul>
-						<li><a href="https://en.wikipedia.org/wiki/Grace_Hopper">Grace Hopper</a> invented the compiler for translating between human readable code and machine code.</li>
-						<li><a href="https://en.wikipedia.org/wiki/Margaret_Hamilton_(scientist)">Margaret Hamilton</a> led the development of on-board flight software for NASAs Apollo Moon missions.</li>
-						<li><a href="https://en.wikipedia.org/wiki/List_of_pioneers_in_computer_science">A further list of pioneers in Computer Science</a>.</li>
-						<li><a href="https://en.wikipedia.org/wiki/Software_bug">Software bugs</a> began with real insects!</li>
-						<li><a href="https://en.wikipedia.org/wiki/Hacker_culture">Hacker culture</a> is about curiosity, not breaking into computer systems. You are all hackers now.</li>
-					</ul>
-				</section>
-				<section>
-					<h3>6. Bonus: Fuzzy logic, Computer Vision and Neural Networks.</h3>
-					<ul>
-						<li><a href="https://en.wikipedia.org/wiki/Fuzzy_logic">Fuzzy logic</a> is a logic where results be other numbers between 0 and 1 - rather than one or the other. It's very useful for controlling systems which are analogue, like a washing machine.</li>
-						<li><a href="https://en.wikipedia.org/wiki/Computer_vision">Computer vision</a> in computer science is the study of making computers able to understand images or video.</li>
-						<li>See this <a href="https://www.edge.org/response-detail/10351">Edge.org article on Hidden Layers</a> for an explanation of how biological research directly influenced the creation of <a href="https://en.wikipedia.org/wiki/Artificial_neural_network">Artifical Neural Networks</a>, a key part of modern <a href="https://en.wikipedia.org/wiki/Machine_learning">Machine Learning</a>. <a href="https://www.youtube.com/watch?v=l42lr8AlrHk">Computerphile video on what Deep Learning is</a>. <a href="https://www.youtube.com/watch?v=py5byOOHZM8">Another Computerphile video on Convolutional Neural Networks and what makes them SO special</a>.</li>
-						<li><a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">t-SNE</a> is a machine learning technique for collapsing multidimensional data into two or three dimensions - simply put, a great way of visualising a set of images.</li>
-					</ul>
-				</section>
-				<section>
-					<h2>Thanks!</h2>
-					<ul>
-						<li>More about me: <a href="https://twitter.com/joelgethinlewis">@joelgethinlewis</a></li>
-						<li>Get in contact via: <a href="https://www.joelgethinlewis.com/">www.joelgethinlewis.com</a></li>
-						<li>Website:<br><a href="https://jgl.github.io/ComputationalThinking2018/">https://jgl.github.io/ComputationalThinking2018</a></li>
-						<li>Today's slides:<br><a href="https://jgl.github.io/ComputationalThinking2018/lecture6.html">https://jgl.github.io/ComputationalThinking2018/lecture6.html</a></li>
-					</ul>
-				</section>
-			</div>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="reveal/reset.css">
+	<link rel="stylesheet" href="reveal/reveal.css">
+	<link rel="stylesheet" href="reveal/theme/white.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Computational Thinking</h2>
+				<p>Joel Gethin Lewis</p>
+				<p>Lecture 6: Looping</p>
+			</section>
+			<section>
+				<h3>What I'm going to talk about today:</h3>
+				<ol>
+					<li>Boolean algebra and control flow.</li>
+					<li>Functions and recursion.</li>
+					<li>Object-oriented programming.</li>
+					<li>The Jacquard Loom, Charles Babbage and Ada Lovelace.</li>
+					<li>Pāṇini, al-Khwarizmi, al-Jazari, Alan Turing, Tommy Flowers, Grace Hopper, Margaret Hamilton, Bugs and Hacking.</li>
+					<li>Bonus: Fuzzy logic, Computer Vision and Neural Networks.</li>
+				</ol>
+			</section>
+			<section>
+				<h3>1. Boolean algebra and control flow.</h3>
+				<ul>
+					<li><a href="https://en.wikipedia.org/wiki/Boolean_algebra">Boolean algebra</a>, named after <a href="https://en.wikipedia.org/wiki/George_Boole">George Boole</a>. The <a href="https://en.wikipedia.org/wiki/Boolean_data_type">Boolean data type</a> is a common to most programming languages - only two values - True (1) or False (0). One is true, nothing is false.</li>
+					<li>Boolean operators allow you to combine or invert boolean data types - the three basic ones are AND, OR and NOT.</li>
+					<li>Control flow in programming is how you control the flow of which part of the program is executed next.</li>
+					<li><a href="https://en.wikipedia.org/wiki/Conditional_(computer_programming)">Conditional statements</a>, such as if statements are very common.</li>
+					<li>Loops such as <a href="https://en.wikipedia.org/wiki/While_loop">while loops</a> and <a href="https://en.wikipedia.org/wiki/For_loop">for loops</a> are also very common.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>2. Functions and recursion.</h3>
+				<ul>
+					<li>Instead of writing long lists of commands, one after another, functions allow programmers to package up functionality into smaller mini programs, known as <a href="https://en.wikipedia.org/wiki/Subroutine">functions or subroutines</a>.</li>
+					<li>Take input and return an output - an example might be a function that returns the square of an input number, or as complicated as <a href="https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker's_Guide_to_the_Galaxy">the answer to everything</a>.</li>
+					<li><a href="https://en.wikipedia.org/wiki/Recursion">Recursion</a> is when something is defined in terms of itself. <a href="https://en.wikipedia.org/wiki/Recursion#Recursive_humor">Recursive humour is funny</a>. Recursion is also found in graphic design, art and cooking. In <a href="https://en.wikipedia.org/wiki/Recursion_(computer_science)">computer science recursion</a> is when a function calls itself repeatedly. The method of working out the <a href="https://en.wikipedia.org/wiki/Recursion_(computer_science)#Recursive_procedures">Factorial of any number</a> is a classic example.</li>
+					<li>A <a href="https://en.wikipedia.org/wiki/Fractal">fractal</a> is a good example of something that is visually recursive.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>3. Abstraction and Object-oriented programming.</h3>
+				<ul>
+					<li><a href="https://en.wikipedia.org/wiki/Abstraction">Abstraction</a> is a concept that has been applied to many fields, including <a href="https://en.wikipedia.org/wiki/Abstract_art">art</a> and <a href="https://en.wikipedia.org/wiki/Abstraction_(computer_science)">computer science</a>.</li>
+					<li>Abstraction is a key feature of <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object orientated programming</a>.</li>
+					<li><a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a> is an example of an object orientated language. <a href="https://en.wikipedia.org/wiki/C_%28programming_language%29">C</a> was one of its predecessors and functional. The ++ means increment, hence C++ being one better than C. (-;</li>
+					<li>There are many <a href="https://en.wikipedia.org/wiki/Comparison_of_programming_paradigms">different ways of programming, also known as paradigms</a>.</li>
+					<li>Two amusing languages are <a href="https://en.wikipedia.org/wiki/Brainfuck">Brainfuck</a> and <a href="https://en.wikipedia.org/wiki/Whitespace_(programming_language)">Whitespace</a>, there are many other <a href="https://en.wikipedia.org/wiki/Esoteric_programming_language">Esoteric languages</a>. (-;</li>
+				</ul>
+			</section>
+			<section>
+				<h3>4. The Jacquard Loom, Charles Babbage and Ada Lovelace.</h3>
+				<ul>
+					<li><a href="https://en.wikipedia.org/wiki/Jacquard_loom">The Jacquard Loom</a> was the worlds first programmable object.</li>
+					<li>Interestingly, the word <a href="https://en.wikipedia.org/wiki/Sabotage">sabotage</a> comes from French workers using their sabots or clogs to destroy machines, perhaps.</li>
+					<li><a href="https://en.wikipedia.org/wiki/Charles_Babbage">Charles Babbage</a> is the inventor of the concept of a digital computer. Babbage was aware of the Jacquard Loom and expanded upon the punch card to invent both the <a href="https://en.wikipedia.org/wiki/Difference_engine">Difference Engine</a> and the <a href="https://en.wikipedia.org/wiki/Analytical_Engine">Analytical Engine</a>.</li>
+					<li><a href="https://en.wikipedia.org/wiki/Ada_Lovelace">Ada Lovelace</a> was the worlds first computer programmer, even realising that the computer could be used to make music and art.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>5. Pāṇini, al-Khwarizmi, al-Jazari, Alan Turing, Tommy Flowers, Grace Hopper, Margaret Hamilton, Bugs and Hacking.</h3>
+				<ul>
+					<li><a href="https://en.wikipedia.org/wiki/P%C4%81%E1%B9%87ini">Pāṇini</a> pioneered a grammar that incorporated metarules and recursion - making the first <a href="https://en.wikipedia.org/wiki/Formal_language">formal language</a>.</li>
+					<li><a href="https://en.wikipedia.org/wiki/Muhammad_ibn_Musa_al-Khwarizmi">Muhammad ibn Musa al-Khwarizmi</a> formalised algebra, his name gave rise to the word algorithm and introduced the decimal system to the western world.</li>
+					<li><a href="https://en.wikipedia.org/wiki/Ismail_al-Jazari">Ismail al-Jazari</a> invented programmable machines, including programmable humanoid robots and an astronomical clock considered the first programmable analog computer.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>5. Pāṇini, al-Khwarizmi, al-Jazari, Alan Turing, Tommy Flowers, Grace Hopper, Margaret Hamilton, Bugs and Hacking (continued).</h3>
+				<ul>
+					<li><a href="https://en.wikipedia.org/wiki/Alan_Turing">Alan Turing</a> formalised the concept of the algorithm and computation in general. During the Second World War he led the team that broke German Naval codes. He went on to design one of the first stored program computers and did pioneering work in <a href="https://en.wikipedia.org/wiki/Morphogenesis">Morphogenesis</a>, or how living things form themselves. He was prosecuted by the British Government for being gay, and committed suicide in 1954. If an system is capable of general computation it is said to be <a href="https://en.wikipedia.org/wiki/Turing_completeness">Turing complete</a>. The <a href="https://en.wikipedia.org/wiki/Turing_test">Turing test</a> is a test of machine intelligence in comparison to human intelligence.</li>
+					<li><a href="https://en.wikipedia.org/wiki/Tommy_Flowers">Tommy Flowers</a> was the engineer who built Turing's machine.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>5. Pāṇini, al-Khwarizmi, al-Jazari, Alan Turing, Tommy Flowers, Grace Hopper, Margaret Hamilton, Bugs and Hacking (continued).</h3>
+				<ul>
+					<li><a href="https://en.wikipedia.org/wiki/Grace_Hopper">Grace Hopper</a> invented the compiler for translating between human readable code and machine code.</li>
+					<li><a href="https://en.wikipedia.org/wiki/Margaret_Hamilton_(scientist)">Margaret Hamilton</a> led the development of on-board flight software for NASAs Apollo Moon missions.</li>
+					<li><a href="https://en.wikipedia.org/wiki/List_of_pioneers_in_computer_science">A further list of pioneers in Computer Science</a>.</li>
+					<li><a href="https://en.wikipedia.org/wiki/Software_bug">Software bugs</a> began with real insects!</li>
+					<li><a href="https://en.wikipedia.org/wiki/Hacker_culture">Hacker culture</a> is about curiosity, not breaking into computer systems. You are all hackers now.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>6. Bonus: Fuzzy logic, Computer Vision and Neural Networks.</h3>
+				<ul>
+					<li><a href="https://en.wikipedia.org/wiki/Fuzzy_logic">Fuzzy logic</a> is a logic where results be other numbers between 0 and 1 - rather than one or the other. It's very useful for controlling systems which are analogue, like a washing machine.</li>
+					<li><a href="https://en.wikipedia.org/wiki/Computer_vision">Computer vision</a> in computer science is the study of making computers able to understand images or video.</li>
+					<li>See this <a href="https://www.edge.org/response-detail/10351">Edge.org article on Hidden Layers</a> for an explanation of how biological research directly influenced the creation of <a href="https://en.wikipedia.org/wiki/Artificial_neural_network">Artifical Neural Networks</a>, a key part of modern <a href="https://en.wikipedia.org/wiki/Machine_learning">Machine Learning</a>. <a href="https://www.youtube.com/watch?v=l42lr8AlrHk">Computerphile video on what Deep Learning is</a>. <a href="https://www.youtube.com/watch?v=py5byOOHZM8">Another Computerphile video on Convolutional Neural Networks and what makes them SO special</a>.</li>
+					<li><a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">t-SNE</a> is a machine learning technique for collapsing multidimensional data into two or three dimensions - simply put, a great way of visualising a set of images.</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Thanks!</h2>
+				<ul>
+					<li>More about me: <a href="https://twitter.com/joelgethinlewis">@joelgethinlewis</a></li>
+					<li>Get in contact via: <a href="https://www.joelgethinlewis.com/">www.joelgethinlewis.com</a></li>
+					<li>Website:<br><a href="https://jgl.github.io/ComputationalThinking2018/">https://jgl.github.io/ComputationalThinking2018</a></li>
+					<li>Today's slides:<br><a href="https://jgl.github.io/ComputationalThinking2018/lecture6.html">https://jgl.github.io/ComputationalThinking2018/lecture6.html</a></li>
+				</ul>
+			</section>
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="reveal/reveal.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/search/search.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				// Push each slide change to the browser history
-				history: true,
-				// Display a presentation progress bar
-				progress: true,
-				// Display the page number of the current slide
-				slideNumber: 'c/t',
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
 
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+		});
+
+	</script>
+</body>
+
 </html>
